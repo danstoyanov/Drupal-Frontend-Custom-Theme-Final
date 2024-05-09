@@ -1,0 +1,2 @@
+# Drupal-Frontend-Custom-Theme-Final
+ Drupal-Frontend-Custom-Theme-Project 🎨 is designed to extend Drupal's theming capabilities by creating a custom theme that leverages the flexibility of base themes. This project focuses on integrating comprehensive layout structures with dynamic content placement across multiple regions 🌐, such as headers, footers, and newly introduced areas. It includes advanced theme enhancements like custom templates, preprocessed data, and innovative CSS and JS implementations tailored to improve user experience and adaptability 🚀.
