@@ -1,8 +1,6 @@
-name: Nature
+name: Nature 1.0.0
 type: theme
-base theme: Olivero
-description: 'The Nature theme created by Dan Stoyanov!'
-package: Core
-# version: VERSION
-hidden: true
+description: The Nature theme created by Dan Stoyanov!
+package: Other
 core_version_requirement: ^9 || ^10
+base theme: olivero
