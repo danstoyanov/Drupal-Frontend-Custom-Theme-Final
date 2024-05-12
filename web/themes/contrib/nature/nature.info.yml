@@ -5,13 +5,18 @@ package: Other
 core_version_requirement: ^9 || ^10
 base theme: olivero
 
+libraries:
+  - nature/global-styling
+  - nature/font-awesome
+
 regions:
   header: 'Header'
-  content: 'Content'
-  content_bottom: 'Content (bottom)'
-  primary_menu: 'Primary menu'
+  page_top: 'Page top'
   banner_top: 'Banner (top)'
+  primary_menu: 'Primary menu'
+  content: 'Content'
+  sidebar: 'Sidebar'
+  content_bottom: 'Content (bottom)'
   banner_bottom: 'Banner (bottom)'
   footer: 'Footer'
-  page_top: 'Page top'
   page_bottom: 'Page bottom'
