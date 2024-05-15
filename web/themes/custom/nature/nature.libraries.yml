@@ -3,6 +3,7 @@ global-styling:
   css:
     theme:
       css/global.css: {}
+      https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css: {}
   js:
     js/custom.js: {}
   dependencies:

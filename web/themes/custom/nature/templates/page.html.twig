@@ -22,6 +22,7 @@
           <a id="main-content" tabindex="-1"></a>
           {{ page.hero }}
 
+
           <!-- Loader Section -->
           <div class="loader_bg">
             <div class="loader">
@@ -35,21 +36,31 @@
             {% if page.sidebar %}
               <div class="sidebar-grid grid-full">
                 <main role="main" class="site-main">
-
-
-
                   {{ page.content_above }}
+
+                  {# Check if we are on a node page and the node title variable is set. #}
+                  {% if node is not empty and node_title is not empty %}
+                    <h1>{{ node_title|raw }}</h1>
+                  {% else %}
+                    <h1>{{ title }}</h1>
+                  {% endif %}
+
                   {{ page.content }}
                 </main>
                 {{ page.sidebar }}
               </div>
             {% else %}
               <main role="main">
-
-
                 {{ page.content_above }}
-                {{ page.content }}
 
+                {# Check if we are on a node page and the node title variable is set. #}
+                {% if node is not empty and node_title is not empty %}
+                  <h1>{{ node_title|raw }}</h1>
+                {% else %}
+                  <h1>{{ title }}</h1>
+                {% endif %}
+
+                {{ page.content }}
               </main>
             {% endif %}
             {{ page.content_below }}
@@ -62,6 +73,9 @@
 
     <footer class="site-footer">
       <div class="site-footer__inner container">
+
+        <h1>Test tooooooooooooooooooo</h1>
+
         {{ page.footer }}
       </div>
       <div class="created-by">
@@ -74,7 +88,6 @@
 
   <!-- Page bottom region -->
   {{ page.page_bottom }}
-
 
 
   {% if page.bottom %}

@@ -2,6 +2,6 @@
   $(document).ready(function () {
     setTimeout(() => {
       $('.loader_bg').fadeToggle();
-    }, 2000)
+    }, 750)
   });
 })(jQuery);
