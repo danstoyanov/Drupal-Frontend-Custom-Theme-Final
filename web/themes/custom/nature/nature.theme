@@ -12,9 +12,6 @@ function nature_preprocess_region(&$variables) {
 /**
  * Implements hook_preprocess_HOOK() for node templates.
  */
-/**
- * Implements hook_preprocess_HOOK() for node templates.
- */
 function nature_preprocess_node(&$variables) {
   // Use the leaf icon from Font Awesome.
   $icon_html = '<i class="fas fa-leaf"></i> '; // Font Awesome leaf icon.
