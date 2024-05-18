@@ -1,6 +1,14 @@
+
 <div id="page-wrapper" class="page-wrapper">
   <!-- Page top region -->
   {{ page.page_top }}
+
+  <!-- Loader Section -->
+  <div class="loader_bg">
+    <div class="loader">
+      <img src="{{ directory }}/images/loadingleafs.gif" alt="#" />
+    </div>
+  </div>
 
   <div id="page">
     {% if page.header or page.primary_menu %}
@@ -20,15 +28,6 @@
       <div id="main" class="layout-main">
         <div class="main-content">
           <a id="main-content" tabindex="-1"></a>
-          {{ page.hero }}
-
-
-          <!-- Loader Section -->
-          <div class="loader_bg">
-            <div class="loader">
-              <img src="{{ directory }}/images/loadingleafs.gif" alt="#" />
-            </div>
-          </div>
 
           <div class="main-content__container container">
             {{ page.highlighted }}
@@ -38,14 +37,15 @@
                 <main role="main" class="site-main">
                   {{ page.content_above }}
 
-                  {# Check if we are on a node page and the node title variable is set. #}
-                  {% if node is not empty and node_title is not empty %}
-                    <h1>{{ node_title|raw }}</h1>
-                  {% else %}
-                    <h1>{{ title }}</h1>
-                  {% endif %}
+{#                  #}{# Check if we are on a node page and the node title variable is set. #}
+{#                  {% if node is not empty and node_title is not empty %}#}
+{#                    <h1>{{ node_title|raw }}</h1>#}
+{#                  {% else %}#}
+{#                    <h1>{{ title }}</h1>#}
+{#                  {% endif %}#}
 
                   {{ page.content }}
+
                 </main>
                 {{ page.sidebar }}
               </div>
@@ -61,6 +61,11 @@
                 {% endif %}
 
                 {{ page.content }}
+
+
+
+
+
               </main>
             {% endif %}
             {{ page.content_below }}
@@ -71,8 +76,17 @@
       </div>
     </div>
 
+
+    <h3>{{ test_icon|raw }} {{ test_title|raw }}</h3>
+
+    {{ note_title }}
+
+
     <footer class="site-footer">
       <div class="site-footer__inner container">
+
+
+
 
         {{ page.footer }}
       </div>
@@ -86,7 +100,6 @@
 
   <!-- Page bottom region -->
   {{ page.page_bottom }}
-
 
   {% if page.bottom %}
     {{ page.bottom }}

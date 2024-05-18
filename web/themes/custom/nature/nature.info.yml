@@ -7,7 +7,7 @@ base theme: olivero
 
 libraries:
   - nature/global-styling
-#  - nature/font-awesome
+  - nature/font-awesome
 
 regions:
   header: 'Header'

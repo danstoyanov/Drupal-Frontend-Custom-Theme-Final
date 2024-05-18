@@ -1,11 +1,11 @@
 <?php
 
 /**
- * Implements hook_preprocess_region().
+ * Implements hook_theme_suggestions_HOOK_alter() to add a template suggestion for node 3.
  */
-function nature_preprocess_region(&$variables) {
-  if ($variables['region'] == 'header') {
-    $variables['attributes']['class'][] = theme_get_setting('site_branding_bg_color');
+function nature_suggestions_node_alter(array &$suggestions, array $variables) {
+  if ($variables['node']->id() == 3) {
+    $suggestions[] = 'node__3';
   }
 }
 
@@ -13,9 +13,10 @@ function nature_preprocess_region(&$variables) {
  * Implements hook_preprocess_HOOK() for node templates.
  */
 function nature_preprocess_node(&$variables) {
-  // Use the leaf icon from Font Awesome.
-  $icon_html = '<i class="fas fa-leaf"></i> '; // Font Awesome leaf icon.
-
-  // Prepend the icon to the node title.
-  $variables['title'] = $icon_html . $variables['title'];
+  // Check if the node is of type 'about_us' and its ID is 3.
+  if ($variables['node']->id() == 3) {
+    if (isset($variables['content']['field_other_text'][0]['#context']['value'])) {
+      $variables['content']['field_other_text'][0]['#context']['value'] = 'Custom Text: 🧪 ' . $variables['content']['field_other_text'][0]['#context']['value'];
+    }
+  }
 }
