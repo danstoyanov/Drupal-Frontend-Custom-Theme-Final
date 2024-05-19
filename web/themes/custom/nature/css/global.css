@@ -41,3 +41,21 @@
 .loader {
   text-align: center;
 }
+
+.footer-links {
+  text-align: center;
+  padding: 20px 0;
+  border-top: 1px solid #ccc;
+  margin-top: 20px;
+}
+
+.footer-links a {
+  font-family: 'Comic Sans MS', cursive, sans-serif;  /* Match the font style */
+  color: #000;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}

@@ -15,8 +15,23 @@ function nature_suggestions_node_alter(array &$suggestions, array $variables) {
 function nature_preprocess_node(&$variables) {
   // Check if the node is of type 'about_us' and its ID is 3.
   if ($variables['node']->id() == 3) {
+
+    // Translate some of the paragraphs.
+//    $body_content = $variables['content']['body'][0]['#text'];
+//    $translated_body_content = t($body_content, [], ['langcode' => 'es']);
+//    $variables['content']['body'][0]['#text'] = $translated_body_content;
+    $variables['text_translated_text'] = t('Hello this is the main text to be translated', [], ['langcode' => 'de']);
+
+
+    // Icon fucntionality
+    $variables['new_icon'] = '<i class="fas fa-leaf"></i>';
+
+    // Edit the one of the fields
     if (isset($variables['content']['field_other_text'][0]['#context']['value'])) {
       $variables['content']['field_other_text'][0]['#context']['value'] = 'Custom Text: 🧪 ' . $variables['content']['field_other_text'][0]['#context']['value'];
     }
   }
 }
+
+// modiffyng page data.....
+// $variables['content']['field_other_text'][0]['#context']['value'] = 'Custom Text: 🧪 ' . $variables['content']['field_other_text'][0]['#context']['value'];

@@ -37,13 +37,6 @@
                 <main role="main" class="site-main">
                   {{ page.content_above }}
 
-{#                  #}{# Check if we are on a node page and the node title variable is set. #}
-{#                  {% if node is not empty and node_title is not empty %}#}
-{#                    <h1>{{ node_title|raw }}</h1>#}
-{#                  {% else %}#}
-{#                    <h1>{{ title }}</h1>#}
-{#                  {% endif %}#}
-
                   {{ page.content }}
 
                 </main>
@@ -53,18 +46,7 @@
               <main role="main">
                 {{ page.content_above }}
 
-                {# Check if we are on a node page and the node title variable is set. #}
-                {% if node is not empty and node_title is not empty %}
-                  <h1>{{ node_title|raw }}</h1>
-                {% else %}
-                  <h1>{{ title }}</h1>
-                {% endif %}
-
                 {{ page.content }}
-
-
-
-
 
               </main>
             {% endif %}
@@ -77,16 +59,9 @@
     </div>
 
 
-    <h3>{{ test_icon|raw }} {{ test_title|raw }}</h3>
-
-    {{ note_title }}
-
 
     <footer class="site-footer">
       <div class="site-footer__inner container">
-
-
-
 
         {{ page.footer }}
       </div>
