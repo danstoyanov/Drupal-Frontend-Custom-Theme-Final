@@ -1,18 +1,22 @@
 <header>
-{#  <h4>  {{ new_icon|raw }} {{ label }}</h4>#}
-
   {{ content.field_baner }}
-
 </header>
 
 <div class="node-content">
-  {{ content.body }}
-
   {{ content.field_page_image_type }}
+
+  {{ content.body }}
 </div>
 
-<div class="work-with-us">
-  {{ content.field_work_with_us }}
+{#<h3>{{ new_icon|raw }} {{ 'Welcome to Nature theme!'|t }}</h3>#}
+
+<h3>{{ new_icon|raw }} Welcome to Nature theme!</h3>
+
+
+<br>
+
+<div class="team-members-section">
+  {{ drupal_block('views_block:team_members-block_1') }}
 </div>
 
 <div class="node-content-bottom">

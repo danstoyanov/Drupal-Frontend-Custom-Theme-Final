@@ -1,14 +1,13 @@
+<!-- Loader Section -->
+<div class="loader_bg">
+  <div class="loader">
+    <img src="{{ directory }}/images/loadingleafs.gif" alt="#" />
+  </div>
+</div>
 
 <div id="page-wrapper" class="page-wrapper">
   <!-- Page top region -->
   {{ page.page_top }}
-
-  <!-- Loader Section -->
-  <div class="loader_bg">
-    <div class="loader">
-      <img src="{{ directory }}/images/loadingleafs.gif" alt="#" />
-    </div>
-  </div>
 
   <div id="page">
     {% if page.header or page.primary_menu %}
@@ -35,6 +34,8 @@
             {% if page.sidebar %}
               <div class="sidebar-grid grid-full">
                 <main role="main" class="site-main">
+                  {{ note_title }}
+
                   {{ page.content_above }}
 
                   {{ page.content }}
