@@ -5,6 +5,7 @@ nature.layout.mobile:
   multipliers:
     - 1x
   group: Nature Layout
+
 nature.layout.narrow:
   label: narrow
   mediaQuery: 'screen and (min-width: 750px)'
@@ -12,6 +13,7 @@ nature.layout.narrow:
   multipliers:
     - 1x
   group: Nature Layout
+
 nature.layout.wide:
   label: wide
   mediaQuery: 'screen and (min-width: 1080px)'
@@ -27,6 +29,7 @@ nature.imagesize.mobile:
   multipliers:
     - 1x
   group: Nature Image Sizing
+
 nature.imagesize.narrow:
   label: narrow
   mediaQuery: 'all and (max-width: 960px)'
@@ -34,6 +37,7 @@ nature.imagesize.narrow:
   multipliers:
     - 1x
   group: Nature Image Sizing
+
 nature.imagesize.wide:
   label: wide
   mediaQuery: 'all and (min-width: 961px)'
