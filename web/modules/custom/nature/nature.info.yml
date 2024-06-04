@@ -1,0 +1,5 @@
+name: 'nature'
+type: module
+description: 'Custom code for the Nature website theme.'
+package: Custom
+core_version_requirement: ^10
